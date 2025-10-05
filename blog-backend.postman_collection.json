@@ -1,0 +1,55 @@
+{
+  "info": {
+    "_postman_id": "f9b6e0d4-1234-5678-9101-abcdef123456",
+    "name": "Blog Backend Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Blog",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"My First Blog\",\n  \"content\": \"This is my first blog content\",\n  \"author\": \"Jisan\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/blogs/create", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api","blogs","create"] }
+      }
+    },
+    {
+      "name": "Get All Blogs",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:5000/api/blogs", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api","blogs"] }
+      }
+    },
+    {
+      "name": "Get Single Blog",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:5000/api/blogs/:id", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api","blogs",":id"] }
+      }
+    },
+    {
+      "name": "Update Blog",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"title\": \"Updated Blog Title\",\n  \"content\": \"Updated content\"\n}" },
+        "url": { "raw": "http://localhost:5000/api/blogs/update/:id", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api","blogs","update",":id"] }
+      }
+    },
+    {
+      "name": "Delete Blog",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:5000/api/blogs/delete/:id", "protocol": "http", "host": ["localhost"], "port": "5000", "path": ["api","blogs","delete",":id"] }
+      }
+    }
+  ]
+}
